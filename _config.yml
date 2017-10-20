@@ -71,10 +71,20 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
+github_access_token: 77b40355c595e822503de80f3ac212006cf0786f
+
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - emoji_for_jekyll
+  - graphql-client
+  - jekyll_github_sample
+  - jekyll-gist
+
+  
+
+EditDelete
 
 # Exclude these files from your production _site
 exclude:
