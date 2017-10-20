@@ -71,7 +71,7 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-github_access_token: 77b40355c595e822503de80f3ac212006cf0786f
+github_access_token: "77b40355c595e822503de80f3ac212006cf0786f"
 
 # Use the following plug-ins
 gems:
