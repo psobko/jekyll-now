@@ -5,7 +5,7 @@ Sometimes with Crashlytics beta you can run into scenarios where the application
 
 Most of the time time this is a profile issue, though there are some very specific errors which can occur either in the code or on the test device.
 
-##For Developers
+## For Developers
 To start check to make sure it's not caused by the usual offenders:
 
 * Building the app with the wrong provisioning profile or a profile which was revoked
@@ -15,7 +15,7 @@ To start check to make sure it's not caused by the usual offenders:
 Ideally provisioning profiles should be freshly downloaded followed by a project clean as part of your build process to avoid these types of issues.
 
 
-###Debugging
+### Debugging
 If nothing appears to be wrong you can check the device logs when installing (assuming you have access to the device or it's logs), look for any errors coming from the `installd` process.
 
 To check the profile of the build you can open terminal and run the following command with the path to the .mobileprovision file of the build:
@@ -97,7 +97,7 @@ The output you get will look something like this:
 These two tools give you enough to quickly identify the issue.
 
 
-##For Testers
+## For Testers
 
 It's always a good idea to deploy to a test device first before sending the build notification, just to make sure everything is running smoothly. If everything seems fine but there are still issues on a test device you can try a few things:
 
