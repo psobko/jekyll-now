@@ -1,3 +1,8 @@
+---
+layout: post
+title: Debugging Crashlytics Installation & Launch Issues
+---
+
 Sometimes with Crashlytics beta you can run into scenarios where the application will either close immediately upon launch, or won't even install and alerts the user:
 
 > "Unable to Download App
