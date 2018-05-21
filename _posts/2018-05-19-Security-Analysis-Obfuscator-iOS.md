@@ -3,11 +3,7 @@ layout: post
 title: Security-Analysis-Obfuscator-iOS
 ---
 
-This is a quick informal analysis of the 
-
-[Obfuscator-iOS]: https://github.com/pjebs/Obfuscator-iOS
-
- library which allows obfuscation of strings for Objective-C and Swift. It's probably more of a tutorial than anything else and the methods presented here can be applied to any "security" library like this one. There are much faster ways to break this library but we're going to be running under the following assumptions to make things difficult (despite their improbability):
+This is a quick informal analysis of the [Obfuscator-iOS](https://github.com/pjebs/Obfuscator-iOS ) library which allows obfuscation of strings for Objective-C and Swift. It's probably more of a tutorial than anything else and the methods presented here can be applied to any "security" library like this one. There are much faster ways to break this library but we're going to be running under the following assumptions to make things difficult (despite their improbability):
 
 - We can't attach a debugger to the application.
 
@@ -45,11 +41,11 @@ IPAs can be downloaded online without the need of a jailbroken device. Up to iOS
 
 So to get started I'm going to fire up my favorite disassembler Hopper and load in the binary using the pre-selected options. For the sake of this example we can say the app was specifically targeted and no-automated analysis was performed. The first thing I notice when browsing the labels is the name of the  obfuscation library:
 
-![obfuscator-labels-6940979]({{site.baseurl}}/images/obfuscator-labels-6940979.png)
+![obfuscator-labels-6940979]({{site.baseurl}}/images/obfuscator-labels.png)
 
 Seeing that I know immediately that there is sensitive data present and which library is being used to manage it. From there I look up the documentation and find the obfuscation method `reveal:` which I then search for to find where the procedure where this code is being implemented:
 
-![Screen Shot 2018-05-20 at 6.28.01 PM]({{site.baseurl}}/images/obfuscator-reveal.png)
+![obfuscator-reveal]({{site.baseurl}}/images/obfuscator-reveal.png)
 
 The first thing I notice is the following line:
 
@@ -142,8 +138,4 @@ There are some basic principles for developing secure applications which I think
 
 Research and think for yourself, don't widen the attack surface of an application because of five paragraphs on Medium or LinkedIn written by someone looking to market themselves while possessing little if any professional security knowledge. If you use Stack Overflow also be aware that it's users are notorious for instinctively regurgitating outdated/opinionated answers regarding security.
 
-The code used in this article is available 
-
-[here]: https://github.com/psobko/DudeWheresMyStrings/tree/obfuscator
-
-.
+The code used in this article is available [here](https://github.com/psobko/DudeWheresMyStrings/tree/obfuscator ).
